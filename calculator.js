@@ -1,12 +1,9 @@
 const inputBox = document.getElementById("inputBox");
 const buttons = document.querySelectorAll("button");
-
 let expression = "";
-
 buttons.forEach(button => {
   button.addEventListener("click", (e) => {
     const value = e.target.innerText;
-
     if (value === "=") {
       try {
         expression = eval(expression).toString();
@@ -20,7 +17,6 @@ buttons.forEach(button => {
     } else {
       expression += value;
     }
-
     inputBox.value = expression;
   });
 });
